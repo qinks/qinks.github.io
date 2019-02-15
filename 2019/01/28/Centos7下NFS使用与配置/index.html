@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Mr.Qin">
 <meta property="og:description" content="NFS是Network File System的缩写，即网络文件系统。客户端通过挂载的方式将NFS服务器端共享的数据目录挂载到本地目录下。 1. NFS的工作流程12341、由程序在NFS客户端发起存取文件的请求，客户端本地的RPC(rpcbind)服务会通过网络向NFS服务端的RPC的111端口发出文件存取功能的请求。2、NFS服务端的RPC找到对应已注册的NFS端口，通知客户端RPC服务。3、">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-15T08:43:47.000Z">
+<meta property="og:updated_time" content="2019-02-15T09:16:23.361Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Centos下NFS使用与配置">
 <meta name="twitter:description" content="NFS是Network File System的缩写，即网络文件系统。客户端通过挂载的方式将NFS服务器端共享的数据目录挂载到本地目录下。 1. NFS的工作流程12341、由程序在NFS客户端发起存取文件的请求，客户端本地的RPC(rpcbind)服务会通过网络向NFS服务端的RPC的111端口发出文件存取功能的请求。2、NFS服务端的RPC找到对应已注册的NFS端口，通知客户端RPC服务。3、">
@@ -98,7 +98,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Gemini',
+    scheme: 'Pisces',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":"ture","onmobile":false},
     fancybox: true,
@@ -409,6 +409,7 @@
 <h1 id="1-NFS的工作流程"><a href="#1-NFS的工作流程" class="headerlink" title="1. NFS的工作流程"></a>1. NFS的工作流程</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1、由程序在NFS客户端发起存取文件的请求，客户端本地的RPC(rpcbind)服务会通过网络向NFS服务端的RPC的111端口发出文件存取功能的请求。</span><br><span class="line">2、NFS服务端的RPC找到对应已注册的NFS端口，通知客户端RPC服务。</span><br><span class="line">3、客户端获取正确的端口，并与NFS daemon联机存取数据。</span><br><span class="line">4、存取数据成功后，返回前端访问程序，完成一次存取操作。</span><br></pre></td></tr></table></figure>
 <p>所以无论客户端 和服务端都需要用NFS，必须安装RPC服务。</p>
 <p>NFS的RPC服务，在Centos5下名为portmap,Centos6下名称为rpcbind.</p>
+<a id="more"></a>  
 <h1 id="2-Centos7搭建NFS服务器实例"><a href="#2-Centos7搭建NFS服务器实例" class="headerlink" title="2. Centos7搭建NFS服务器实例"></a>2. Centos7搭建NFS服务器实例</h1><table>
 <thead>
 <tr>
