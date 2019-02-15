@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Mutt是什么它是一款基于文字界面的邮件客户端,非常小巧,但功能强大,可以用它来读写,回复保存和删除你的邮件,能在linux命令行模式下收发邮件附件,更多的用法请查阅官网：http://www.mutt.org Mutt安装与配置安装1yum install mutt -y 配置vim  /etc/Muttrc  末尾添加12345678#如果你收到的邮件乱码，设置以下信息set charset=">
+<meta name="description" content="1.Mutt是什么它是一款基于文字界面的邮件客户端,非常小巧,但功能强大,可以用它来读写,回复保存和删除你的邮件,能在linux命令行模式下收发邮件附件,更多的用法请查阅官网：http://www.mutt.org 2.Mutt安装与配置2.1安装1yum install mutt -y 2.2配置vim  /etc/Muttrc  末尾添加12345678#如果你收到的邮件乱码，设置以下信息se">
 <meta name="keywords" content="Mutt">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux中使用mutt发送邮件">
 <meta property="og:url" content="http://yoursite.com/2019/01/29/Linux中使用mutt发送邮件/index.html">
 <meta property="og:site_name" content="Mr.Qin">
-<meta property="og:description" content="Mutt是什么它是一款基于文字界面的邮件客户端,非常小巧,但功能强大,可以用它来读写,回复保存和删除你的邮件,能在linux命令行模式下收发邮件附件,更多的用法请查阅官网：http://www.mutt.org Mutt安装与配置安装1yum install mutt -y 配置vim  /etc/Muttrc  末尾添加12345678#如果你收到的邮件乱码，设置以下信息set charset=">
+<meta property="og:description" content="1.Mutt是什么它是一款基于文字界面的邮件客户端,非常小巧,但功能强大,可以用它来读写,回复保存和删除你的邮件,能在linux命令行模式下收发邮件附件,更多的用法请查阅官网：http://www.mutt.org 2.Mutt安装与配置2.1安装1yum install mutt -y 2.2配置vim  /etc/Muttrc  末尾添加12345678#如果你收到的邮件乱码，设置以下信息se">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-14T08:09:22.000Z">
+<meta property="og:updated_time" content="2019-02-15T08:36:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux中使用mutt发送邮件">
-<meta name="twitter:description" content="Mutt是什么它是一款基于文字界面的邮件客户端,非常小巧,但功能强大,可以用它来读写,回复保存和删除你的邮件,能在linux命令行模式下收发邮件附件,更多的用法请查阅官网：http://www.mutt.org Mutt安装与配置安装1yum install mutt -y 配置vim  /etc/Muttrc  末尾添加12345678#如果你收到的邮件乱码，设置以下信息set charset=">
+<meta name="twitter:description" content="1.Mutt是什么它是一款基于文字界面的邮件客户端,非常小巧,但功能强大,可以用它来读写,回复保存和删除你的邮件,能在linux命令行模式下收发邮件附件,更多的用法请查阅官网：http://www.mutt.org 2.Mutt安装与配置2.1安装1yum install mutt -y 2.2配置vim  /etc/Muttrc  末尾添加12345678#如果你收到的邮件乱码，设置以下信息se">
 
 
 
@@ -98,7 +98,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Gemini',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":"ture","onmobile":false},
     fancybox: true,
@@ -368,7 +368,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  699
+                  709
                 </span>
               
 
@@ -384,7 +384,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  3
                 </span>
               
             </div>
@@ -405,12 +405,12 @@
       
 
       
-        <h1 id="Mutt是什么"><a href="#Mutt是什么" class="headerlink" title="Mutt是什么"></a>Mutt是什么</h1><p>它是一款基于文字界面的邮件客户端,非常小巧,但功能强大,可以用它来读写,回复保存和删除你的邮件,能在linux命令行模式下收发邮件附件,更多的用法请查阅官网：<a href="http://www.mutt.org" target="_blank" rel="noopener">http://www.mutt.org</a></p>
-<h1 id="Mutt安装与配置"><a href="#Mutt安装与配置" class="headerlink" title="Mutt安装与配置"></a>Mutt安装与配置</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mutt -y</span><br></pre></td></tr></table></figure>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>vim  /etc/Muttrc  末尾添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#如果你收到的邮件乱码，设置以下信息</span><br><span class="line">set charset=&quot;utf-8&quot;</span><br><span class="line">set rfc2047_parameters=yes</span><br><span class="line">#如果你想自定义发件人信息，需要进行如下设置</span><br><span class="line">set envelope_from=yes</span><br><span class="line">set use_from=yes</span><br><span class="line">set from=new_land_sh@126.com</span><br><span class="line">set realname=&quot;Newland_SH&quot;</span><br></pre></td></tr></table></figure></p>
-<h1 id="邮件发送"><a href="#邮件发送" class="headerlink" title="邮件发送"></a>邮件发送</h1><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>　　mutt [-hnpRvxz][-a&lt;文件&gt;][-b&lt;地址&gt;][-c&lt;地址&gt;][-f&lt;邮件文 件&gt;][-F&lt;配置文件&gt;][-H&lt;邮件草稿&gt;][-i&lt;文件&gt;][-m&lt;类型&gt;] [-s&lt;主题&gt;][邮件地址]<br>　　参　数：<br>　-a　&lt;文件&gt;　在邮件中加上附加文件。<br>　-b　&lt;地址&gt;　指定密件副本的收信人地址。<br>　-c　&lt;地址&gt;　指定副本的收信人地址。<br>　-f　&lt;邮件文件&gt;　指定要载入的邮件文件。<br>　-F　&lt;配置文件&gt;　指定mutt程序的设置文件，而不读取预设的.muttrc文件。<br>　-h　显示帮助。<br>　-H　&lt;邮件草稿&gt;　将指定的邮件草稿送出。<br>　-i　&lt;文件&gt;　将指定文件插入邮件内文中。<br>　-m　&lt;类型&gt;　指定预设的邮件信箱类型。<br>　-n　不要去读取程序培植文件(/etc/Muttrc)。<br>　-p　在mutt中编辑完邮件后，而不想将邮件立即送出，可将该邮件暂缓寄出。<br>　-R　以只读的方式开启邮件文件。<br>　-s　&lt;主题&gt;　指定邮件的主题。<br>　-v　显示mutt的版本信息以及当初编译此文件时所给予的参数。<br>　-x　模拟mailx的编辑方式。<br>　-z　与-f参数一并使用时，若邮件文件中没有邮件即不启动mutt。</p>
-<h2 id="测试发送邮件"><a href="#测试发送邮件" class="headerlink" title="测试发送邮件"></a>测试发送邮件</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mutt -s &quot;this is a test mail&quot; xxxxxxxxx@qq.com</span><br></pre></td></tr></table></figure>
-<h1 id="利用shell脚本发送邮件"><a href="#利用shell脚本发送邮件" class="headerlink" title="利用shell脚本发送邮件"></a>利用shell脚本发送邮件</h1><p>首先vim mails.sh<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">#定义日期变量</span><br><span class="line">date_time=`date +%Y%m%d`</span><br><span class="line"></span><br><span class="line">#从10.100.0.22拉取所需报表到本机</span><br><span class="line">scp  -r root@10.100.0.22:/data/report/dailyopt/dailyopt&quot;$date_time&quot;.csv /root/dailyopt  &gt;/dev/null 2&gt;&amp;1</span><br><span class="line"></span><br><span class="line">#发送带附件邮件到制定收件人</span><br><span class="line">if [ $? -eq 0 ]; then</span><br><span class="line"></span><br><span class="line">        for i in `cat /root/mailp.txt`;do</span><br><span class="line">                mutt -s &quot;$date_time优化数据&quot; $i -a /root/dailyopt/dailyopt&quot;$date_time&quot;.csv  &lt; /root/mail.txt</span><br><span class="line">        done</span><br><span class="line"></span><br><span class="line">else</span><br><span class="line">        echo &quot;This email was not sent&quot; &gt;&gt; /root/dailyopt/error.log</span><br><span class="line"></span><br><span class="line">fi</span><br></pre></td></tr></table></figure></p>
+        <h1 id="1-Mutt是什么"><a href="#1-Mutt是什么" class="headerlink" title="1.Mutt是什么"></a>1.Mutt是什么</h1><p>它是一款基于文字界面的邮件客户端,非常小巧,但功能强大,可以用它来读写,回复保存和删除你的邮件,能在linux命令行模式下收发邮件附件,更多的用法请查阅官网：<a href="http://www.mutt.org" target="_blank" rel="noopener">http://www.mutt.org</a></p>
+<h1 id="2-Mutt安装与配置"><a href="#2-Mutt安装与配置" class="headerlink" title="2.Mutt安装与配置"></a>2.Mutt安装与配置</h1><h2 id="2-1安装"><a href="#2-1安装" class="headerlink" title="2.1安装"></a>2.1安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mutt -y</span><br></pre></td></tr></table></figure>
+<h2 id="2-2配置"><a href="#2-2配置" class="headerlink" title="2.2配置"></a>2.2配置</h2><p>vim  /etc/Muttrc  末尾添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#如果你收到的邮件乱码，设置以下信息</span><br><span class="line">set charset=&quot;utf-8&quot;</span><br><span class="line">set rfc2047_parameters=yes</span><br><span class="line">#如果你想自定义发件人信息，需要进行如下设置</span><br><span class="line">set envelope_from=yes</span><br><span class="line">set use_from=yes</span><br><span class="line">set from=new_land_sh@126.com</span><br><span class="line">set realname=&quot;Newland_SH&quot;</span><br></pre></td></tr></table></figure></p>
+<h1 id="3-邮件发送"><a href="#3-邮件发送" class="headerlink" title="3.邮件发送"></a>3.邮件发送</h1><h2 id="3-1语法"><a href="#3-1语法" class="headerlink" title="3.1语法"></a>3.1语法</h2><p>　　mutt [-hnpRvxz][-a&lt;文件&gt;][-b&lt;地址&gt;][-c&lt;地址&gt;][-f&lt;邮件文 件&gt;][-F&lt;配置文件&gt;][-H&lt;邮件草稿&gt;][-i&lt;文件&gt;][-m&lt;类型&gt;] [-s&lt;主题&gt;][邮件地址]<br>　　参　数：<br>　-a　&lt;文件&gt;　在邮件中加上附加文件。<br>　-b　&lt;地址&gt;　指定密件副本的收信人地址。<br>　-c　&lt;地址&gt;　指定副本的收信人地址。<br>　-f　&lt;邮件文件&gt;　指定要载入的邮件文件。<br>　-F　&lt;配置文件&gt;　指定mutt程序的设置文件，而不读取预设的.muttrc文件。<br>　-h　显示帮助。<br>　-H　&lt;邮件草稿&gt;　将指定的邮件草稿送出。<br>　-i　&lt;文件&gt;　将指定文件插入邮件内文中。<br>　-m　&lt;类型&gt;　指定预设的邮件信箱类型。<br>　-n　不要去读取程序培植文件(/etc/Muttrc)。<br>　-p　在mutt中编辑完邮件后，而不想将邮件立即送出，可将该邮件暂缓寄出。<br>　-R　以只读的方式开启邮件文件。<br>　-s　&lt;主题&gt;　指定邮件的主题。<br>　-v　显示mutt的版本信息以及当初编译此文件时所给予的参数。<br>　-x　模拟mailx的编辑方式。<br>　-z　与-f参数一并使用时，若邮件文件中没有邮件即不启动mutt。</p>
+<h2 id="3-2测试发送邮件"><a href="#3-2测试发送邮件" class="headerlink" title="3.2测试发送邮件"></a>3.2测试发送邮件</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mutt -s &quot;this is a test mail&quot; xxxxxxxxx@qq.com</span><br></pre></td></tr></table></figure>
+<h1 id="4-利用shell脚本发送邮件"><a href="#4-利用shell脚本发送邮件" class="headerlink" title="4.利用shell脚本发送邮件"></a>4.利用shell脚本发送邮件</h1><p>首先vim mails.sh<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">#定义日期变量</span><br><span class="line">date_time=`date +%Y%m%d`</span><br><span class="line"></span><br><span class="line">#从10.100.0.22拉取所需报表到本机</span><br><span class="line">scp  -r root@10.100.0.22:/data/report/dailyopt/dailyopt&quot;$date_time&quot;.csv /root/dailyopt  &gt;/dev/null 2&gt;&amp;1</span><br><span class="line"></span><br><span class="line">#发送带附件邮件到制定收件人</span><br><span class="line">if [ $? -eq 0 ]; then</span><br><span class="line"></span><br><span class="line">        for i in `cat /root/mailp.txt`;do</span><br><span class="line">                mutt -s &quot;$date_time优化数据&quot; $i -a /root/dailyopt/dailyopt&quot;$date_time&quot;.csv  &lt; /root/mail.txt</span><br><span class="line">        done</span><br><span class="line"></span><br><span class="line">else</span><br><span class="line">        echo &quot;This email was not sent&quot; &gt;&gt; /root/dailyopt/error.log</span><br><span class="line"></span><br><span class="line">fi</span><br></pre></td></tr></table></figure></p>
 <p>其中：<br>vim /root/mailp.txt  定义多个收件人<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xxxxxxxxx@163.com</span><br><span class="line">xxxxxxxxx@qq.com</span><br><span class="line">xxxxxxxxx@126.com</span><br></pre></td></tr></table></figure></p>
 <p>vim /root/mail.txt   定义邮件正文内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">请查收今日数据报表！</span><br></pre></td></tr></table></figure></p>
 <p>最后crontab -e    添加计划任务定时执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 2 * * * /bin/sh  /root/mails.sh</span><br></pre></td></tr></table></figure></p>
@@ -586,7 +586,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mutt是什么"><span class="nav-number">1.</span> <span class="nav-text">Mutt是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Mutt安装与配置"><span class="nav-number">2.</span> <span class="nav-text">Mutt安装与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">2.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#邮件发送"><span class="nav-number">3.</span> <span class="nav-text">邮件发送</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#语法"><span class="nav-number">3.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试发送邮件"><span class="nav-number">3.2.</span> <span class="nav-text">测试发送邮件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#利用shell脚本发送邮件"><span class="nav-number">4.</span> <span class="nav-text">利用shell脚本发送邮件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Mutt是什么"><span class="nav-text">1.Mutt是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Mutt安装与配置"><span class="nav-text">2.Mutt安装与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1安装"><span class="nav-text">2.1安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2配置"><span class="nav-text">2.2配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-邮件发送"><span class="nav-text">3.邮件发送</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1语法"><span class="nav-text">3.1语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2测试发送邮件"><span class="nav-text">3.2测试发送邮件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-利用shell脚本发送邮件"><span class="nav-text">4.利用shell脚本发送邮件</span></a></li></ol></div>
             
 
           </div>
@@ -620,7 +620,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">7.1k</span>
+    <span title="Site words total count">7.2k</span>
   
 </div>
 
@@ -735,6 +735,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
