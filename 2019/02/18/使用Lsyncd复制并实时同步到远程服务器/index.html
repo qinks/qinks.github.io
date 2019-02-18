@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Python,">
+  <meta name="keywords" content="Lsyncd,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="1.安装EPEL和IUS软件源yum install epel-release -y yum install https://centos7.iuscommunity.org/ius-release.rpm -y 2.安装Python3.6yum install python36u -y">
-<meta name="keywords" content="Python">
+<meta name="description" content="1. 何为Lsyncd？Lsyncd 官网 https://axkibe.github.io/ Lsyncd监视本地目录树事件监视器接口(inotify或fsevents)。它聚合并将事件组合在一起几秒钟，然后生成一个(或多个)进程来同步这些更改。默认情况下，由rsync实现同步。因此，Lsyncd是一种轻量级的实时镜像解决方案，相对容易安装，不需要新的文件系统或块设备，也不会妨碍本地文件系统的性">
+<meta name="keywords" content="Lsyncd">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Cenos7Yun安装Python3">
-<meta property="og:url" content="http://yoursite.com/2019/01/25/Centos7Yun安装Python3/index.html">
+<meta property="og:title" content="使用Lsyncd复制并实时同步到远程服务器">
+<meta property="og:url" content="http://yoursite.com/2019/02/18/使用Lsyncd复制并实时同步到远程服务器/index.html">
 <meta property="og:site_name" content="Mr.Qin">
-<meta property="og:description" content="1.安装EPEL和IUS软件源yum install epel-release -y yum install https://centos7.iuscommunity.org/ius-release.rpm -y 2.安装Python3.6yum install python36u -y">
+<meta property="og:description" content="1. 何为Lsyncd？Lsyncd 官网 https://axkibe.github.io/ Lsyncd监视本地目录树事件监视器接口(inotify或fsevents)。它聚合并将事件组合在一起几秒钟，然后生成一个(或多个)进程来同步这些更改。默认情况下，由rsync实现同步。因此，Lsyncd是一种轻量级的实时镜像解决方案，相对容易安装，不需要新的文件系统或块设备，也不会妨碍本地文件系统的性">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-15T09:16:03.010Z">
+<meta property="og:updated_time" content="2019-02-18T10:18:07.378Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cenos7Yun安装Python3">
-<meta name="twitter:description" content="1.安装EPEL和IUS软件源yum install epel-release -y yum install https://centos7.iuscommunity.org/ius-release.rpm -y 2.安装Python3.6yum install python36u -y">
+<meta name="twitter:title" content="使用Lsyncd复制并实时同步到远程服务器">
+<meta name="twitter:description" content="1. 何为Lsyncd？Lsyncd 官网 https://axkibe.github.io/ Lsyncd监视本地目录树事件监视器接口(inotify或fsevents)。它聚合并将事件组合在一起几秒钟，然后生成一个(或多个)进程来同步这些更改。默认情况下，由rsync实现同步。因此，Lsyncd是一种轻量级的实时镜像解决方案，相对容易安装，不需要新的文件系统或块设备，也不会妨碍本地文件系统的性">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/01/25/Centos7Yun安装Python3/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/18/使用Lsyncd复制并实时同步到远程服务器/">
 
 
 
 
 
-  <title>Cenos7Yun安装Python3 | Mr.Qin</title>
+  <title>使用Lsyncd复制并实时同步到远程服务器 | Mr.Qin</title>
   
 
 
@@ -285,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/25/Centos7Yun安装Python3/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/18/使用Lsyncd复制并实时同步到远程服务器/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Karson">
@@ -302,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Cenos7Yun安装Python3</h1>
+          <h1 class="post-title" itemprop="name headline">使用Lsyncd复制并实时同步到远程服务器</h1>
         
 
         <div class="post-meta">
@@ -314,8 +314,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-25T17:49:36+08:00">
-                2019-01-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-18T18:15:08+08:00">
+                2019-02-18
               </time>
             
 
@@ -337,8 +337,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -368,7 +368,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  64
+                  1.3k
                 </span>
               
 
@@ -384,7 +384,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  5
                 </span>
               
             </div>
@@ -405,14 +405,46 @@
       
 
       
-        <h1 id="1-安装EPEL和IUS软件源"><a href="#1-安装EPEL和IUS软件源" class="headerlink" title="1.安装EPEL和IUS软件源"></a>1.安装EPEL和IUS软件源</h1><pre><code>yum install epel-release -y
-yum install https://centos7.iuscommunity.org/ius-release.rpm -y
-</code></pre><h1 id="2-安装Python3-6"><a href="#2-安装Python3-6" class="headerlink" title="2.安装Python3.6"></a>2.安装Python3.6</h1><pre><code>yum install python36u -y
-</code></pre><a id="more"></a>
-<h1 id="3-创建python3连接符"><a href="#3-创建python3连接符" class="headerlink" title="3.创建python3连接符"></a>3.创建python3连接符</h1><pre><code>ln -s /bin/python3.6 /bin/python3
-</code></pre><h1 id="4-安装pip3"><a href="#4-安装pip3" class="headerlink" title="4.安装pip3"></a>4.安装pip3</h1><pre><code>yum install python36u-pip -y
-</code></pre><h1 id="5-创建pip3链接符"><a href="#5-创建pip3链接符" class="headerlink" title="5.创建pip3链接符"></a>5.创建pip3链接符</h1><pre><code>ln -s /bin/pip3.6 /bin/pip3
-</code></pre>
+        <h1 id="1-何为Lsyncd？"><a href="#1-何为Lsyncd？" class="headerlink" title="1. 何为Lsyncd？"></a>1. 何为Lsyncd？</h1><p>Lsyncd 官网 <a href="https://axkibe.github.io/" target="_blank" rel="noopener">https://axkibe.github.io/</a></p>
+<p>Lsyncd监视本地目录树事件监视器接口(inotify或fsevents)。它聚合并将事件组合在一起几秒钟，然后生成一个(或多个)进程来同步这些更改。默认情况下，由rsync实现同步。因此，Lsyncd是一种轻量级的实时镜像解决方案，相对容易安装，不需要新的文件系统或块设备，也不会妨碍本地文件系统的性能。</p>
+<p><code>Rsync+ssh</code>是一种高级操作配置，它使用ssh来执行文件和目录直接在目标上移动，而不是在线路上重新传输移动目标。细粒度的定制可以通过配置文件实现。自定义动作<code>configs</code>甚至可以从头编写，从<code>shell</code>脚本到<code>Lua</code>语言编写的代码。这种方法简单，强大，灵活的配置可以被解决。</p>
+<p><code>Lsyncd 2.2.2</code>要求在所有源和目标机器上<code>rsync &gt;= 3.1</code>。</p>
+<a id="more"></a>
+<p><strong>系统环境：</strong></p>
+<blockquote>
+<p>RenwoleServer：10.28.204.65 服务端<br>RenwoleClient：10.28.204.66 客户端<br>OS：CentOS Linux release 7.4.1708 (Core) x64</p>
+</blockquote>
+<h1 id="2-rsync的安装"><a href="#2-rsync的安装" class="headerlink" title="2. rsync的安装"></a>2. rsync的安装</h1><blockquote>
+<p>请参阅：《<a href="https://renwole.com/archives/987" target="_blank" rel="noopener"><strong>CentOS 7配置Rsync数据文件同步服务器</strong></a>》。</p>
+</blockquote>
+<h2 id="2-1-安装扩展依赖包"><a href="#2-1-安装扩展依赖包" class="headerlink" title="2.1 安装扩展依赖包"></a>2.1 安装扩展依赖包</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum install -y gcc gcc-c++ lua lua-devel cmake libxml2 libxml2-devel</span><br></pre></td></tr></table></figure>
+<h2 id="2-2-源代码编译安装lsyncd"><a href="#2-2-源代码编译安装lsyncd" class="headerlink" title="2.2 源代码编译安装lsyncd"></a>2.2 源代码编译安装lsyncd</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ wget https://github.com/axkibe/lsyncd/archive/release-2.2.2.tar.gz</span><br><span class="line">$ tar xvf release-2.2.2.tar.gz</span><br><span class="line">$ cd lsyncd-release-2.2.2</span><br><span class="line">$ cmake -DCMAKE\_INSTALL\_PREFIX=/usr/local/lsyncd</span><br><span class="line">$ make &amp;&amp; make install</span><br><span class="line">$ ln -s /usr/local/lsyncd/bin/lsyncd /usr/bin/lsyncd</span><br></pre></td></tr></table></figure>
+<p>安装过程可能报错：</p>
+<p><code>-- Configuring incomplete, errors occurred!</code></p>
+<p>安装<code>lua-devel</code>即可。</p>
+<h2 id="2-3-设置无密码SSH登录"><a href="#2-3-设置无密码SSH登录" class="headerlink" title="2.3 设置无密码SSH登录"></a>2.3 设置无密码SSH登录</h2><p>因为这里使用<code>rsyncssh</code>进行同步，所以还需要配置root账号无密码ssh登录。详细配置请参阅：</p>
+<blockquote>
+<p>《<strong><a href="https://renwole.com/archives/907" target="_blank" rel="noopener">如何在Linux中设置SSH无密码登录</a></strong>》</p>
+</blockquote>
+<h1 id="3-配置lsyncd"><a href="#3-配置lsyncd" class="headerlink" title="3. 配置lsyncd"></a>3. 配置lsyncd</h1><p>以下是三种常用配置案例</p>
+<h2 id="3-1-远程同步rsyncssh模式配置方案："><a href="#3-1-远程同步rsyncssh模式配置方案：" class="headerlink" title="3.1 远程同步rsyncssh模式配置方案："></a>3.1 远程同步<code>rsyncssh</code>模式配置方案：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">$ vim /etc/lsyncd.conf</span><br><span class="line"></span><br><span class="line">settings &#123;</span><br><span class="line">    logfile = &quot;/var/log/lsyncd.log&quot;,          --日志路径</span><br><span class="line">    statusFile = &quot;/var/log/lsyncd.status&quot;,    --状态文件</span><br><span class="line">    pidfile = &quot;/var/run/lsyncd.pid&quot;,          --pid文件路径</span><br><span class="line">    statusInterval = 1,                       --状态文件写入最短时间</span><br><span class="line">    nodaemon = false,                         --daemon运行</span><br><span class="line">    maxProcesses = 1,                         --最大进程</span><br><span class="line">    maxDelays = 1,                            --最大延迟</span><br><span class="line">&#125;</span><br><span class="line">sync &#123;</span><br><span class="line">    default.rsyncssh,      --默认rsync+ssh,rsync版本需要升级3以上版本</span><br><span class="line">    source = &quot;/apps/www/renwoleblog/&quot;,        --源目录</span><br><span class="line">    delete = true,                            --保持完全同步        </span><br><span class="line">    host = &quot;root@10.28.204.66&quot;,         </span><br><span class="line">    targetdir = &quot;/apps/www/renwoleblog/bak/&quot;, --目标目录</span><br><span class="line">    exclude=&#123;                 </span><br><span class="line">             &quot;.txt&quot;            --需排除的文件</span><br><span class="line">    &#125;,</span><br><span class="line">rsync = &#123;</span><br><span class="line">    binary = &quot;/usr/bin/rsync&quot;, --需先安装好rsync</span><br><span class="line">    archive = true,            --归档</span><br><span class="line">    compress = false,          --压缩</span><br><span class="line">    owner = true,              --属主</span><br><span class="line">    perms = true,              --权限</span><br><span class="line">    whole\_file = false</span><br><span class="line">    &#125;,</span><br><span class="line">ssh = &#123;</span><br><span class="line">    port = 22</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-2-本地目录同步配置方案："><a href="#3-2-本地目录同步配置方案：" class="headerlink" title="3.2 本地目录同步配置方案："></a>3.2 本地目录同步配置方案：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sync &#123;</span><br><span class="line">    default.rsync,</span><br><span class="line">    source = &quot;/apps/www/renwoleblog/&quot;,</span><br><span class="line">    target = &quot;/apps/www/renwoleblog/bak/&quot;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-3-远程同步rsync-daemon模式配置方案"><a href="#3-3-远程同步rsync-daemon模式配置方案" class="headerlink" title="3.3 远程同步rsync-daemon模式配置方案"></a>3.3 远程同步rsync-daemon模式配置方案</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">sync &#123;</span><br><span class="line">    default.rsync,</span><br><span class="line">    source    = &quot;/apps/www/renwoleblog/&quot;,</span><br><span class="line">    target    = &quot;renwole@10.28.204.65::renwolecom&quot;,</span><br><span class="line">    delete=&quot;true&quot;,</span><br><span class="line">    exclude = &#123; &quot;.bak\*&quot; &#125;,</span><br><span class="line">    delay = 30,</span><br><span class="line">    init = false,</span><br><span class="line">    rsync = &#123;</span><br><span class="line">    binary = &quot;/usr/bin/rsync&quot;,</span><br><span class="line">    archive = true,</span><br><span class="line">    compress = true,</span><br><span class="line">    verbose   = true,</span><br><span class="line">    perms = true,</span><br><span class="line">    password\_file = &quot;/etc/rsync.password&quot;,</span><br><span class="line">    \_extra    = &#123;&quot;--bwlimit=200&quot;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>重点参数说明：</p>
+<p>--        # 注释符<br>settings  # 是全局配置<br>sync      # 定义同步参数<br>rsync     # 定义同步文件参数<br>ssh       # 定义服务器远程端口</p>
+<p><code>lsyncd</code>配置文件允许多个<code>sync</code>互不影响。</p>
+<p>说明：如果是一对多，请参阅本地同步，修改目标目录即可。</p>
+<h1 id="4-创建systemctl系统单元文件"><a href="#4-创建systemctl系统单元文件" class="headerlink" title="4. 创建systemctl系统单元文件"></a>4. 创建systemctl系统单元文件</h1><p>为了实现systemctl进行管理，请创建配置文件以及脚本启动文件，命令如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim /etc/sysconfig/lsyncd</span><br></pre></td></tr></table></figure></p>
+<p>添加如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LSYNCD_OPTIONS=&quot;/etc/lsyncd.conf&quot;</span><br></pre></td></tr></table></figure></p>
+<p>创建启动文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim /usr/lib/systemd/system/lsyncd.service</span><br></pre></td></tr></table></figure></p>
+<p>添加如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=Live Syncing (Mirror) Daemon</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=simple</span><br><span class="line">EnvironmentFile=-/etc/sysconfig/lsyncd</span><br><span class="line">ExecStart=/usr/local/lsyncd/bin/lsyncd -nodaemon $LSYNCD\_OPTIONS</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure></p>
+<p><strong>7.启动lsyncd并加入开机自启动</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ systemctl start lsyncd</span><br><span class="line">$ systemctl enable lsyncd</span><br></pre></td></tr></table></figure></p>
+<p>接下来你就可以往源服务器<code>/apps/www/renwoleblog/</code>内上传任意文件，完成后立刻就会同步到客户端<code>10.28.204.66`</code>/apps/www/renwoleblog/bak/`目录内，也可以查看服务端的lsyncd日志文件分析是否同步成功。例如：</p>
+<p>[root@RenwoleServer ~] $ cat /var/log/lsyncd.log</p>
+<p>…<br>Fri Dec 22 01:19:22 2017 Normal: Calling rsync with filter-list of new/modified files/dirs<br>/PCHunter_renwole.com.tar.gz<br>/<br>Fri Dec 22 01:19:24 2017 Normal: Finished (list): 0<br>Fri Dec 22 01:19:32 2017 Normal: Calling rsync with filter-list of new/modified files/dirs<br>/PCHunter_renwole.com.tar.gz<br>/<br>Fri Dec 22 01:19:34 2017 Normal: Finished (list): 0<br>Fri Dec 22 01:19:34 2017 Normal: Calling rsync with filter-list of new/modified files/dirs<br>/PCHunter_renwole.com.tar.gz<br>/<br>Fri Dec 22 01:19:36 2017 Normal: Finished (list): 0</p>
+<p>日志内容显示<code>PCHunter_renwole.com.rar</code>文件成功同步。</p>
+<p>另外<code>lsyncd</code>是基于<code>inotify</code>+<code>rsync</code>的开源同步软件，相对于其他同步软件更加安全可靠，占用资源更少，但配置略麻烦。<br><code>lsyncd</code>还支持当监控到某个指定事件时就执行什么样的命令，由于是通过时间延迟和累计事件命中次数来触发同步，在设计上要优于<code>inotify</code>，另外他的同步速度完全取决于你的网络质量。</p>
+
       
     </div>
     
@@ -429,7 +461,7 @@ yum install https://centos7.iuscommunity.org/ius-release.rpm -y
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+            <a href="/tags/Lsyncd/" rel="tag"><i class="fa fa-tag"></i> Lsyncd</a>
           
         </div>
       
@@ -442,15 +474,15 @@ yum install https://centos7.iuscommunity.org/ius-release.rpm -y
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/01/29/Linux中使用mutt发送邮件/" rel="next" title="Linux中使用mutt发送邮件">
+                <i class="fa fa-chevron-left"></i> Linux中使用mutt发送邮件
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/28/Lsyncd实时同步搭建指南/" rel="prev" title="Lsyncd实时同步搭建指南">
-                Lsyncd实时同步搭建指南 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -584,7 +616,7 @@ yum install https://centos7.iuscommunity.org/ius-release.rpm -y
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-安装EPEL和IUS软件源"><span class="nav-text">1.安装EPEL和IUS软件源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-安装Python3-6"><span class="nav-text">2.安装Python3.6</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-创建python3连接符"><span class="nav-text">3.创建python3连接符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-安装pip3"><span class="nav-text">4.安装pip3</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-创建pip3链接符"><span class="nav-text">5.创建pip3链接符</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-何为Lsyncd？"><span class="nav-text">1. 何为Lsyncd？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-rsync的安装"><span class="nav-text">2. rsync的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-安装扩展依赖包"><span class="nav-text">2.1 安装扩展依赖包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-源代码编译安装lsyncd"><span class="nav-text">2.2 源代码编译安装lsyncd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-设置无密码SSH登录"><span class="nav-text">2.3 设置无密码SSH登录</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-配置lsyncd"><span class="nav-text">3. 配置lsyncd</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-远程同步rsyncssh模式配置方案："><span class="nav-text">3.1 远程同步rsyncssh模式配置方案：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-本地目录同步配置方案："><span class="nav-text">3.2 本地目录同步配置方案：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-远程同步rsync-daemon模式配置方案"><span class="nav-text">3.3 远程同步rsync-daemon模式配置方案</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-创建systemctl系统单元文件"><span class="nav-text">4. 创建systemctl系统单元文件</span></a></li></ol></div>
             
 
           </div>
