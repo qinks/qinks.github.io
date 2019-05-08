@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Mr.Qin">
 <meta property="og:description" content="sftp_test:测试账号sftp_prod:生产账号">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-07T13:18:15.177Z">
+<meta property="og:updated_time" content="2019-05-08T06:21:24.326Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Centos7配置sftp服务">
 <meta name="twitter:description" content="sftp_test:测试账号sftp_prod:生产账号">
@@ -368,7 +368,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  275
+                  273
                 </span>
               
 
@@ -413,7 +413,7 @@
 <h1 id="4-创建用户的根目录，修改属主属组，修改权限-755"><a href="#4-创建用户的根目录，修改属主属组，修改权限-755" class="headerlink" title="4.创建用户的根目录，修改属主属组，修改权限(755)"></a>4.创建用户的根目录，修改属主属组，修改权限(755)</h1><p>mkdir  -p  /home/sftp_test  &amp;&amp; chown root.sftp /home/sftp_test  &amp;&amp; chmod 755 /home/sftp_test<br>mkdir  -p  /home/sftp_prod  &amp;&amp; chown root.sftp /home/sftp_prod  &amp;&amp; chmod 755 /home/sftp_prod</p>
 <h1 id="5-为测试和生产用户分别创建可写入的目录"><a href="#5-为测试和生产用户分别创建可写入的目录" class="headerlink" title="5.为测试和生产用户分别创建可写入的目录"></a>5.为测试和生产用户分别创建可写入的目录</h1><p>mkdir  -p /home/sftp_test/sftp_test  &amp;&amp; chown  sftp_test.sftp /home/sftp_test/sftp_test<br>mkdir  -p /home/sftp_prod/sftp_prod  &amp;&amp; chown  sftp_prod.sftp /home/sftp_prod/sftp_prod</p>
 <h1 id="6-修改sshd-config的配置文件"><a href="#6-修改sshd-config的配置文件" class="headerlink" title="6.修改sshd_config的配置文件"></a>6.修改sshd_config的配置文件</h1><p>vim /etc/ssh/sshd_config<br>找到 Subsystem行注释掉<br>并在文件最末尾添加以下内容:</p>
-<p>Subsystem sftp internal-sftp<br>X11Forwarding no<br>AllowTcpForwarding no<br>ForceCommand internal-sftp<br>Match User sftp_test<br>ChrootDirectory /home/sftp_test<br>Match User sftp_prod<br>ChrootDirectory /home/sftp_prod</p>
+<p>Subsystem sftp internal-sftp<br>X11Forwarding no<br>AllowTcpForwarding no<br>Match User sftp_test<br>ChrootDirectory /home/sftp_test<br>Match User sftp_prod<br>ChrootDirectory /home/sftp_prod</p>
 <h1 id="7-重启sshd服务"><a href="#7-重启sshd服务" class="headerlink" title="7.重启sshd服务"></a>7.重启sshd服务</h1><p>systemctl restart sshd</p>
 <h1 id="8-客户端登录"><a href="#8-客户端登录" class="headerlink" title="8.客户端登录"></a>8.客户端登录</h1><h2 id="8-1第一种方式"><a href="#8-1第一种方式" class="headerlink" title="8.1第一种方式"></a>8.1第一种方式</h2><p>sftp <a href="mailto:sftp_test@88.88.88.88" target="_blank" rel="noopener">sftp_test@88.88.88.88</a><br>输入密码即可</p>
 <h2 id="8-2第二种方式"><a href="#8-2第二种方式" class="headerlink" title="8.2第二种方式"></a>8.2第二种方式</h2><p>lftp -u sftp_test,xxx s<a href="ftp://88.88.88.88" target="_blank" rel="noopener">ftp://88.88.88.88</a><br>(xxx为密码，如没有lftp命令则使用yum -y install lftp安装即可)</p>
@@ -623,7 +623,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">11.1k</span>
+    <span title="Site words total count">11k</span>
   
 </div>
 
