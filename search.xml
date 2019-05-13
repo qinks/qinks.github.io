@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Zabbix使用微信告警]]></title>
+    <url>%2F2019%2F05%2F13%2FZabbix%E4%BD%BF%E7%94%A8%E5%BE%AE%E4%BF%A1%E5%91%8A%E8%AD%A6%2F</url>
+    <content type="text"><![CDATA[部署环境：（Zabbix的版本为3.4.10）Zabbix server：192.168.2.205 Centos 7Zabbix agent：192.168.2.204 Centos 7 1.注册一个企业微信号浏览器打开https://work.weixin.qq.com/， 点击企业注册。注册成功后会看到企业信息页面，把企业ID先记录下来，后面发送报警脚本里需要配置。 2.创建一个部门，专供发送报警用，并添加需要接收报警的成员点击“通讯录”，再点击+号，选择“添加部门”。把部门ID记录下来，后面配置web端用户报警媒介的收件人要用到。给刚创建的部门添加成员，可以直接添加成员也可以微信邀请，可以先将管理员微信添加进来。这里可以点击“微信邀请”，用管理员微信扫描二维码添加。 3.新增一个第三方应用企业应用-创建应用可见范围那里选择刚才添加的那个部门将AgentId和Secret记录下来，发送脚本里需要配置。 4.下载微信发送脚本12345cd /tmp/git clone https://github.com/loong576/Wechat-Alert-for-Zabbix.gitcp Wechat-Alert-for-Zabbix/wechat_alert.py /data/zabbix/share/zabbix/alertscripts/chown zabbix:zabbix /data/zabbix/share/zabbix/alertscripts/wechat_alert.pychmod +x /data/zabbix/share/zabbix/alertscripts/wechat_alert.py 没有git命令的话，可以用yum安装yum -y install git安装requests模块 1234yum -y install epel-releaseyum -y install python-pippip install --upgrade pippip install requests 5.修改wechat_alert.py脚本修改下面3行内容，就是前面记录的企业ID，AgentId和Secret。 123Corpid = &quot;xxxxxxxxxxxxxxxxxx&quot; # 企业IDSecret = &quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;Agentid = &quot;xxxxxxx&quot; 6.创建报警媒介类型脚本参数这里只需要添加下面两个参数，收件人和报警内容{ALERT.SENDTO}{ALERT.MESSAGE} 7.新建用户群组，用于接收微信报警 8.新建一个接收微信报警的用户，并将其加入到刚刚创建的用户群组添加用户报警媒介，将之前记录下来的部门ID填入收件人里。 9.创建报警动作至此所有配置就都完成了，下面来测试一下吧。 10.报警测试跟前面邮件测试一样，往zabbix server主机的/boot目录下写入一个700M的垃圾邮件，使其触发报警。dd if=/dev/zero of=/boot/test bs=100M count=7然后我们用手机打开企业微信，来看一下报警信息吧查看微信报警信息有两种方式：1、在企业微信上查看；2、关注企业微信号，在微信上查看。 11.关注企业微信号，在微信上查看报警信息先通过微信扫描通讯录里的二维码或者直接添加成员，将其加入到接收报警的部门里。然后进入到连接微信-微工作台，下面有个邀请关注二维码，手机上打开微信扫描此二维码，然后输入自己的手机号通过验证即可。以后就可以直接在微信上接收报警了，在下图中“监控报警”里面查看报警信息。]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Zabbix</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Centos7配置sftp服务]]></title>
     <url>%2F2019%2F05%2F07%2FCentos7%E9%85%8D%E7%BD%AEsftp%E6%9C%8D%E5%8A%A1%2F</url>
     <content type="text"><![CDATA[sftp_test:测试账号sftp_prod:生产账号 1.添加用户组groupadd sftp 2.添加不同用户并设置为sftp组并禁止ssh登录useradd -g sftp -s /sbin/nologin -M sftp_testuseradd -g sftp -s /sbin/nologin -M sftp_prod 3.为相应用户添加密码passwd sftp_testpasswd sftp_prod 4.创建用户的根目录，修改属主属组，修改权限(755)mkdir -p /home/sftp_test &amp;&amp; chown root.sftp /home/sftp_test &amp;&amp; chmod 755 /home/sftp_testmkdir -p /home/sftp_prod &amp;&amp; chown root.sftp /home/sftp_prod &amp;&amp; chmod 755 /home/sftp_prod 5.为测试和生产用户分别创建可写入的目录mkdir -p /home/sftp_test/sftp_test &amp;&amp; chown sftp_test.sftp /home/sftp_test/sftp_testmkdir -p /home/sftp_prod/sftp_prod &amp;&amp; chown sftp_prod.sftp /home/sftp_prod/sftp_prod 6.修改sshd_config的配置文件vim /etc/ssh/sshd_config找到 Subsystem行注释掉并在文件最末尾添加以下内容: Subsystem sftp internal-sftpX11Forwarding noAllowTcpForwarding noMatch User sftp_testChrootDirectory /home/sftp_testMatch User sftp_prodChrootDirectory /home/sftp_prod 7.重启sshd服务systemctl restart sshd 8.客户端登录8.1第一种方式sftp sftp_test@88.88.88.88输入密码即可 8.2第二种方式lftp -u sftp_test,xxx sftp://88.88.88.88(xxx为密码，如没有lftp命令则使用yum -y install lftp安装即可)]]></content>
